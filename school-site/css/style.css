@@ -179,7 +179,7 @@ nav {
     align-content: center;
     font-size: 1.125rem ;
     margin-bottom: 1.5rem ;
-    border: solid: 0.0625rem : #33658A;   
+    border: solid 0.0625rem  #33658A;   
 }
 
 nav a:focus,
@@ -190,7 +190,7 @@ nav a:hover {
 
 nav a:active {
     color: #fff;
-    background-color: #000: active;
+    background-color: #000 active;
 }
 
 /* Footer Styles */
