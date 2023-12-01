@@ -1,0 +1,234 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+body {
+        padding:1rem;
+        min-height: 100vw;
+        max-width:100vw;
+        margin:auto;
+}
+
+main {
+    display: flex;
+}
+
+
+.main-section {
+    padding-top: 0.5rem;
+    display: flex;
+    text-align: flex;
+    flex: 1;
+    position: relative; 
+}
+
+.sub-section {
+    padding-right: 150px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: bottom;
+    padding-bottom: 0;
+    position: absolute;
+    bottom: 0; 
+
+}
+
+.row {
+    display: flex;
+  }
+  
+.column {
+flex: 33.33%;
+padding: 5px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.article-image {
+    position: relative;
+    margin-top: 15px;
+    margin: 5px;
+    float: left;
+}
+
+.expand {
+    font-size:x-small;
+}
+
+figure {
+width: auto;
+}
+
+figcaption {
+font-size: auto;
+padding:.5rem;
+margin:0;
+background-color:#242F40;
+color:#B1BED3;
+}
+
+.highlight {
+    font-weight: bolder;
+    font-size: 145%;
+    border: #dea1a1;
+    background-color: rgb(206, 158, 63);
+}
+
+p {
+font-family:'Lato', sans-serif;
+margin-top: 1rem;
+margin-right: auto;
+margin-left: auto;
+padding-top: 0rem;
+padding-right: 1rem;
+width: 90%;    
+text-align: justify;
+font-size: auto;
+padding: 10px;
+}
+
+header {
+border-bottom: .0631rem solid #2a2626;
+margin-bottom:3.9rem;
+padding-bottom:2.1rem;
+  
+}
+
+h1 {
+    padding-left: 50px;
+    font-size: 88px;
+    text-align: center; 
+    margin: auto;
+    transform: rotate(-9deg); 
+}
+
+h2 {
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 1;
+    color: #0d0d0d;
+}
+ 
+h3 {
+font-size: 35px;
+}
+
+aside {
+    height: 100%;
+    border-left: 0.2rem solid #61a5e8;
+    float: right;
+    padding-left: 15px;
+    width: 30vw;
+    box-sizing: border-box;
+}
+
+
+.asideimgs {
+border-radius: 8px;
+max-width: 20vw;
+object-fit: scale-down;
+}
+
+img {
+max-width: 100%;
+max-height: auto;
+}
+
+nav {
+    width: 96vw;
+    font-size: 40px;
+    word-spacing: 120px;
+    height: auto;
+    display: block;
+    overflow: auto;
+    margin-top: 0;
+    border: 0.5rem solid #333;
+    background-color:#61a5e8;
+    
+}
+
+nav a:hover {
+    color:#dea1a1;
+    font-style: oblique;
+      background-color:#160c0c;
+      font-size: 70px;
+  }
+  
+  nav a:active {
+      color:#FFF;
+      font-style: italic;
+      background-color:#333;
+  }
+  
+
+a {
+    align-items: center;
+}
+
+
+footer{
+    width:100%;
+    float:left;
+    background-color:aliceblue;
+    padding: 5px;
+     
+  }
