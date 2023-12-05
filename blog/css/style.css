@@ -47,188 +47,224 @@
 
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
-html {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    background-color: #FFFFFF;
+/* Font Setup */
+
+@font-face {    
+    src: url("../fonts/serif/josefinslab-regular.ttf"), format('TrueType');
+    font-style:normal;
+    font-weight:400 normal;
+    font-family: JoseFinsLab;
 }
 
-body {
-        padding:1rem;
-        min-height: 100vw;
-        max-width:100vw;
-        margin:auto;
+@font-face {
+    src: url("../fonts/sans-serif/montserrat-regular.ttf"), format('TrueType');
+    font-style:normal;
+    font-weight:400 normal;
+    font-family: Montserrat;
+}
+
+/* Setup */
+
+body{
+    padding:0;
+    margin:0 auto;
+    font-size:1rem;
+    max-width: 104rem;
+    min-width:64rem;
 }
 
 main {
-    display: flex;
+    margin:0 auto;
+    padding-bottom:.25rem;
+    width:90%;
 }
 
-
-.main-section {
-    padding-top: 0.5rem;
-    display: flex;
-    text-align: flex;
-    flex: 1;
-    position: relative; 
-}
-
-.sub-section {
-    padding-right: 150px;
-    padding-left: 150px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: bottom;
-    padding-bottom: 0;
-    position: absolute;
-    bottom: 0; 
-
-}
-
-.row {
-    display: flex;
-  }
-  
-.column {
-flex: 33.33%;
-padding: 5px;
-}
-
-.article {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.article-image {
-    position: relative;
-    margin-top: 15px;
-    margin: 5px;
-    float: left;
-}
-
-.expand {
-    font-size:x-small;
-}
-
-figure {
-width: auto;
-}
-
-figcaption {
-font-size: auto;
-padding:.5rem;
-margin:0;
-background-color:#242F40;
-color:#B1BED3;
-}
-
-.highlight {
-    font-weight: bolder;
-    font-size: 145%;
-    border: #dea1a1;
-    background-color: rgb(206, 158, 63);
-}
-
-p {
-font-family:'Lato', sans-serif;
-margin-top: 1rem;
-margin-right: auto;
-margin-left: auto;
-padding-top: 0rem;
-padding-right: 1rem;
-width: 90%;    
-text-align: justify;
-font-size: auto;
-padding: 10px;
-}
-
-header {
-border-bottom: .0631rem solid #2a2626;
-margin-bottom:3.9rem;
-padding-bottom:2.1rem;
-  
-}
-
-h1 {
-    padding-left: 50px;
-    font-size: 88px;
-    text-align: center; 
-    margin: auto;
-    transform: rotate(-9deg); 
-}
-
-h2 {
-    font-size: 50px;
-    text-align: left;
-    margin-bottom: 0;
-    position: absolute;
-    z-index: 1;
-    color: #0d0d0d;
-}
- 
-h3 {
-font-size: 35px;
-}
-
-aside {
-    height: 100%;
-    border-left: 0.2rem solid #61a5e8;
-    float: right;
-    padding-left: 15px;
-    width: 30vw;
+* {
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
-
-.asideimgs {
-border-radius: 8px;
-max-width: 20vw;
-object-fit: scale-down;
+html {
+    font-size:16px;
 }
 
 img {
-max-width: 100%;
-max-height: auto;
+    width:100%;
+    max-width: 25rem;
+    display:block;
 }
+
+/* Headers*/
+h1,
+h2 {
+    letter-spacing:.125rem;
+    font-family: JoseFinsLab, Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    font-size: 3.75rem;
+    margin: 1.125rem;
+    text-align: center;
+    width:75%;
+    transform: rotate(-4deg);
+}
+/* Highlight Element */
+.highlight {
+    color: white;
+    padding:0 1rem;
+    box-shadow: rgb(174, 4, 217);
+    background-color: rgb(92, 0, 125) ;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+/* NAV */
 
 nav {
-    width: 96vw;
-    font-size: 40px;
-    word-spacing: 120px;
-    height: auto;
-    display: block;
-    overflow: auto;
-    margin-top: 0;
-    border: 0.5rem solid #333;
-    background-color:#61a5e8;
-    
+    padding: 0 5%;
+    margin: 4rem 0;
+    border-top: solid .0625rem #33658A;
+    border-bottom: solid .0625rem #33658A;
 }
 
-nav a:hover {
-    color:#dea1a1;
-    font-style: oblique;
-      background-color:#160c0c;
-      font-size: 70px;
-  }
-  
-  nav a:active {
-      color:#FFF;
-      font-style: italic;
-      background-color:#333;
-  }
-  
-
-a {
-    align-items: center;
+nav a {
+    text-decoration: none;
+    display:inline-block;
+    text-align: center;
+    font-size: 1.125rem;
+    padding: 2rem 6rem 2rem 0;
 }
 
+/* Selection Decoration */
 
-footer{
-    width:100%;
+ nav :nth-child(even):focus,
+ nav :nth-child(even):hover,
+ nav :nth-child(even):active {
+    color: black;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    transform:rotate(-4deg) ;
+ }
+
+ nav :nth-child(odd):focus,
+ nav :nth-child(odd):hover,
+ nav :nth-child(odd):active {
+    color: black;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    transform:rotate(4deg) ;
+ }
+
+
+/* Main Section */
+
+.main-section {
+    display:flex;
+}
+
+article {
+    width:75%;
+}
+
+.article-image {
     float:left;
-    background-color:aliceblue;
-    padding: 5px;
-     
-  }
+    margin:0 1rem 0 0;
+}
+
+.article-image + p {
+    margin-top:0;
+}
+
+/* Subsection */
+.subsection {
+    margin-top:4rem;
+    margin-bottom:2rem;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(5rem, 1fr));
+    grid-column-gap:1%;
+}
+.subsection figure {
+    padding:0;
+    margin:0;
+    background-color:#EED;
+}
+
+.subsection figcaption {
+    font-size:.75rem;
+    padding:.75rem;
+}
+
+.subsection img {
+    padding-bottom: 1%;
+    min-width:5rem;
+}
+
+.subsection figure img{
+        width:75%;
+        max-width:25rem;
+}
+
+/* Aside Element */
+
+aside {
+    clear:both;
+    width:19%;
+    margin-left:3%;
+    padding-left:3%;
+    border-left: .0625rem solid #333;
+}
+
+aside p {
+    font-size:.75rem;
+    padding-bottom:2rem;
+    border-bottom:.0625rem solid #333;
+}
+
+.expand {
+    font-size:.25rem;
+    display:block;
+    padding-top:.5rem;
+}
+
+/* Button Decoration */
+
+button {
+    margin-top:1rem;
+    font-family:JoseFinsLab;
+    border-radius:.625rem;
+    font-size:1.5rem;
+    text-transform:uppercase;
+    padding:1rem;
+    background-color:#27476E;
+    box-shadow:.187rem .187rem .187rem #333;
+    border:none;
+    
+    background-color:#27476E;
+}
+
+button a{
+    color:#EED;
+}
+
+/* Footer */
+
+footer {
+    margin:6rem auto .5rem auto;
+    width:90%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1%;
+}
+
+footer a {
+    font-family: JoseFinsLab, serif;
+    color:#6F7D77;
+}
+
+footer :nth-child(2) {
+    text-align:right;
+}
+
